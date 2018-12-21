@@ -6,11 +6,11 @@
 /*   By: aquan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 14:59:31 by aquan             #+#    #+#             */
-/*   Updated: 2018/11/16 15:28:53 by aquan            ###   ########.fr       */
+/*   Updated: 2018/11/18 17:50:48 by aquan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 static int		ft_isspace_mod(char const *s)
 {

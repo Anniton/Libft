@@ -6,11 +6,11 @@
 /*   By: aquan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 17:33:57 by aquan             #+#    #+#             */
-/*   Updated: 2018/11/16 13:44:16 by aquan            ###   ########.fr       */
+/*   Updated: 2018/11/18 17:49:33 by aquan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 static char	*ft_minitoa(int b, long int n, int neg)
 {
@@ -32,8 +32,8 @@ static char	*ft_minitoa(int b, long int n, int neg)
 char		*ft_itoa(int n)
 {
 	int			b;
-	long int	a;
 	int			neg;
+	long int	a;
 	long int	nb;
 
 	nb = (long int)n;

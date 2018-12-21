@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aquan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 10:26:11 by aquan             #+#    #+#             */
-/*   Updated: 2018/11/18 18:13:01 by aquan            ###   ########.fr       */
+/*   Created: 2018/11/18 16:24:52 by aquan             #+#    #+#             */
+/*   Updated: 2018/11/18 16:48:40 by aquan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int		ft_lstlen(t_list **alst)
 {
-	size_t			i;
-	unsigned char	*str;
+	int		i;
+	t_list	*ptr;
 
+	ptr = *alst;
 	i = 0;
-	str = (unsigned char*)s;
-	while (i < n)
+	if (!*alst || !alst)
+		return (0);
+	while (ptr)
 	{
-		if (str[i] == (unsigned char)c)
-			return (str + i);
+		ptr = ptr->next;
 		i++;
 	}
-	return (NULL);
+	return (i);
 }

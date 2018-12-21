@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aquan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 10:26:11 by aquan             #+#    #+#             */
-/*   Updated: 2018/11/18 18:13:01 by aquan            ###   ########.fr       */
+/*   Created: 2018/11/18 15:18:45 by aquan             #+#    #+#             */
+/*   Updated: 2018/11/18 18:09:36 by aquan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
-
-void	*ft_memchr(const void *s, int c, size_t n)
+int		ft_str_is_uppercase(char *str)
 {
-	size_t			i;
-	unsigned char	*str;
-
-	i = 0;
-	str = (unsigned char*)s;
-	while (i < n)
+	if (*str == '\0')
+		return (1);
+	while (*str)
 	{
-		if (str[i] == (unsigned char)c)
-			return (str + i);
-		i++;
+		if (*str < 'A' || *str > 'Z')
+			return (0);
+		str++;
 	}
-	return (NULL);
+	return (1);
 }

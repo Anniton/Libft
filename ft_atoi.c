@@ -6,15 +6,15 @@
 /*   By: aquan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:38:14 by aquan             #+#    #+#             */
-/*   Updated: 2018/11/13 17:27:29 by aquan            ###   ########.fr       */
+/*   Updated: 2018/11/18 17:57:59 by aquan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_atoi(const char *str)
 {
-	unsigned long long i;
-	unsigned long long neg;
-	unsigned long long res;
+	int i;
+	int neg;
+	int res;
 
 	i = 0;
 	res = 0;

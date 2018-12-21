@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strcspn.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aquan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 10:26:11 by aquan             #+#    #+#             */
-/*   Updated: 2018/11/18 18:13:01 by aquan            ###   ########.fr       */
+/*   Created: 2018/11/23 12:37:17 by aquan             #+#    #+#             */
+/*   Updated: 2018/12/21 15:59:13 by aquan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+size_t ft_strcspn(const char *s, const char *reject)
 {
-	size_t			i;
-	unsigned char	*str;
+	size_t i;
+	size_t j;
 
 	i = 0;
-	str = (unsigned char*)s;
-	while (i < n)
+	while (s[i])
 	{
-		if (str[i] == (unsigned char)c)
-			return (str + i);
+		j = 0;
+		while (reject[j])
+		{
+			if (reject[j] == s[i])
+				return (i);
+			j++;
+		}
 		i++;
 	}
-	return (NULL);
+	if (i)
+		return (i);
+	return (0);
 }

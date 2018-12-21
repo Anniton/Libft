@@ -6,11 +6,11 @@
 /*   By: aquan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:54:14 by aquan             #+#    #+#             */
-/*   Updated: 2018/11/16 14:42:12 by aquan            ###   ########.fr       */
+/*   Updated: 2018/11/18 17:56:27 by aquan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strdup(const char *src)
 {

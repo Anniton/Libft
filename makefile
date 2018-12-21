@@ -6,7 +6,7 @@
 #    By: aquan <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/09 12:49:18 by aquan             #+#    #+#              #
-#    Updated: 2018/11/16 16:08:49 by aquan            ###   ########.fr        #
+#    Updated: 2018/11/22 10:26:08 by aquan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,20 +78,25 @@ SRCS	=	ft_memset.c\
 			ft_isspace.c\
 			ft_isxdigit.c\
 			ft_isblank.c\
+			ft_str_is_uppercase.c\
+			ft_lstlen.c\
+			ft_strcspn.c
 
 OBJS	=	$(SRCS:.c=.o)
 
+LIB		=	libft.h
+
 CC		=	gcc
 
-CFLAGS	=	-Wall -Wextra -Werror -Iincludes
+CFLAGS	=	-Wall -Wextra -Werror -I $(LIB)
 
 RM		=	rm -rf
 
 CLEAN	=	clean
 
-all : $(NAME)
+all		:	$(NAME)
 
-$(NAME):	$(OBJS)
+$(NAME)	:	$(OBJS) $(LIB)
 			ar rc $(NAME) $(OBJS)
 			ranlib $(NAME)
 clean	:

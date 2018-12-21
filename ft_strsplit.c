@@ -6,11 +6,11 @@
 /*   By: aquan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 15:21:50 by aquan             #+#    #+#             */
-/*   Updated: 2018/11/16 13:33:17 by aquan            ###   ########.fr       */
+/*   Updated: 2018/11/18 17:50:15 by aquan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 static int	ft_word(char *s, char c)
 {

@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aquan <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 10:26:11 by aquan             #+#    #+#             */
-/*   Updated: 2018/11/18 18:13:01 by aquan            ###   ########.fr       */
+/*   Created: 2018/11/09 10:48:31 by aquan             #+#    #+#             */
+/*   Updated: 2018/12/01 14:50:07 by aquan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
-
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_putnbr_base(int n, int base)
 {
-	size_t			i;
-	unsigned char	*str;
+	const char	base_str[] = "0123456789abcdef";
 
-	i = 0;
-	str = (unsigned char*)s;
-	while (i < n)
+	long int a;
+
+	a = n;
+	if (base > 16 || base <= 1)
+		return ;
+	if (a < 0)
 	{
-		if (str[i] == (unsigned char)c)
-			return (str + i);
-		i++;
+		ft_putchar('-');
+		a = a * -1;
 	}
-	return (NULL);
+	if (a >= base)
+		ft_putnbr_base(a / base, base);
+	ft_putchar((base_str[a % base]));
 }
+
